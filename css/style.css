@@ -7,6 +7,10 @@ html {
   font-size: 10px;
 }
 
+button {
+  outline: none;
+}
+
 .container {
   width: 95%;
   max-width: 1170px;
@@ -389,9 +393,16 @@ header .container .feedback-wrapper button {
 
 #slider .dots .prev-arrow, #slider .dots .next-arrow {
   cursor: pointer;
+  outline: none !important;
+}
+
+#slider .dots .prev-arrow img, #slider .dots .next-arrow img {
+  outline: none;
+  border: 0;
 }
 
 #slider .dots .prev-arrow {
+  outline: none !important;
   margin-right: 39px;
 }
 
