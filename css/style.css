@@ -13,6 +13,24 @@ html {
   margin: 0 auto;
 }
 
+#overlay {
+  position: fixed;
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 12;
+}
+
+.dbp {
+  display: block !important;
+}
+
+.ovhid {
+  overflow: hidden;
+}
+
 header {
   font-family: "Proxima Nova Rg";
   font-weight: 400;
@@ -105,14 +123,16 @@ header .container .feedback-wrapper button {
   right: 20px;
   top: 20px;
   cursor: pointer;
+  z-index: 13;
 }
 
 #menu .container .burger span {
   display: block;
   background-color: #000000;
   width: 25px;
-  height: 1px;
-  margin-bottom: 6px;
+  height: 2px;
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 4px;
 }
 
 #menu .container .burger span:last-child {
@@ -136,6 +156,11 @@ header .container .feedback-wrapper button {
   padding: 0 63px;
   text-align: center;
   border-right: 1px solid #cccccc;
+}
+
+#menu .container .menu-list__item a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 #menu .container .menu-list__item:last-child {
@@ -478,6 +503,9 @@ header .container .feedback-wrapper button {
   #slider .wrapper .slider-item {
     padding: 68px 5% 0 5%;
   }
+  #slider .dots {
+    left: 5%;
+  }
 }
 
 @media screen and (max-width: 1176px) {
@@ -516,9 +544,19 @@ header .container .feedback-wrapper button {
   #advantages {
     margin-top: 0;
   }
+  #slider .dots {
+    bottom: 50px;
+  }
 }
 
 @media screen and (max-width: 800px) {
+  #slider .wrapper .slider-item .wrapper .price div {
+    text-align: center;
+  }
+  #slider .wrapper .slider-item .wrapper .price div b {
+    right: 20px;
+    top: 20px;
+  }
   html {
     font-size: 8px;
   }
@@ -568,11 +606,42 @@ header .container .feedback-wrapper button {
   header .container .feedback-wrapper button {
     margin: 0;
   }
+  #menu {
+    background: none;
+    position: static;
+  }
   #menu .container .burger {
     display: block;
   }
   #menu .container .menu-list {
+    z-index: 12;
     display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    margin-left: 0;
+  }
+  #menu .container .menu-list__item {
+    border: none;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+  }
+  #menu .container .menu-list__item:last-child {
+    margin-bottom: 0;
+  }
+  #menu .container .menu-list__item::after {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   #slider {
     margin-top: 0;
@@ -602,8 +671,10 @@ header .container .feedback-wrapper button {
             align-items: center;
   }
   #slider .wrapper .slider-item h3 {
-    font-size: 5.5rem;
+    font-size: 5rem;
     padding: 10px 20px;
+    margin: 0 auto;
+    margin-bottom: 10px;
   }
   #slider .wrapper .slider-item .wrapper {
     -webkit-box-orient: vertical;
@@ -613,13 +684,23 @@ header .container .feedback-wrapper button {
   }
   #slider .wrapper .slider-item .wrapper p.dest {
     margin-bottom: 20px;
+    font-size: 2.7rem;
   }
   #slider .wrapper .slider-item .wrapper .stick {
     display: none;
   }
   #slider .wrapper .slider-item p.ideas {
-    margin: 15px 0;
+    margin: 15px auto;
     text-align: center;
+  }
+  #slider .wrapper .slider-item button {
+    display: block;
+    margin: 15px auto;
+  }
+  #slider .dots {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 /*# sourceMappingURL=style.css.map */

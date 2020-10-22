@@ -5,7 +5,6 @@ showSlides(slideIndex);
 /* Функция увеличивает индекс на 1, показывает следующй слайд*/
 function showNextSLide() {
     showSlides(slideIndex += 1);
-    console.log(12);
 }
 
 /* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/

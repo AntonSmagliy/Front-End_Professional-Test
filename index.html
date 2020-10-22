@@ -12,7 +12,8 @@
 
 </head>
 <body>
-    
+    <div id="overlay"></div>
+
     <header>
         <div class="container">
                 <div class="container__item logo-wrapper">
@@ -28,17 +29,17 @@
 
     <section id="menu">
         <div class="container">
-            <div class="burger">
+            <div class="burger opened" onclick="toggleBurgerMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <ul class="menu-list">
-                <li class="menu-list__item menu-list__item-active">главная</li>
-                <li class="menu-list__item">для детСкой</li>
-                <li class="menu-list__item">для спальни</li>
-                <li class="menu-list__item">для кухни</li>
-                <li class="menu-list__item">контакты</li>
+                <li class="menu-list__item menu-list__item-active"> <a href="#"> главная</a></li>
+                <li class="menu-list__item"> <a href="#"> для детСкой</a></li>
+                <li class="menu-list__item"> <a href="#"> для спальни</a></li>
+                <li class="menu-list__item"> <a href="#"> для кухни</a></li>
+                <li class="menu-list__item"> <a href="#"> контакты</a></li>
             </ul>
         </div>
     </section>
@@ -165,6 +166,7 @@
         </div>
     </section>
 
+    <script src="js/burger.js"></script>
     <script src="js/slider.js"></script>
 </body>
 </html>
