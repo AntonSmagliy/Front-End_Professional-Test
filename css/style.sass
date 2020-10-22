@@ -112,9 +112,18 @@ header
     #slider-wrapper
         height: 100%
     .wrapper
-        .slider-item 
-            padding: 68px 359px 0 359px
+        .slider-item-first
             background-image: url(../img/slider-bg-1.png)
+        .slider-item-second
+            background-image: url(../img/slider-bg-2.png)
+        .slider-item-third
+            background-image: url(../img/slider-bg-3.png)
+        .slider-item-fourth
+            background-image: url(../img/slider-bg-4.png)
+        .slider-item 
+            animation-name: fade
+            animation-duration: 2s
+            padding: 68px 359px 0 359px
             background-size: cover
             background-position: center center
             position: relative
@@ -170,7 +179,7 @@ header
                             bottom: -5px
                             left: 50%
                             transform: translate(-50%)
-                            width: 226px
+                            width: 115%
                             height: 3px
                             background-color: #000000
                 .price
@@ -228,13 +237,44 @@ header
                 text-transform: uppercase
                 margin-left: 30px
                 margin-top: 2px
+    .dots
+        position: absolute
+        bottom: 320px
+        left: 387px
+        z-index: 11
+        display: flex
+        align-items: center
+        .prev-arrow, .next-arrow
+            cursor: pointer
+        .prev-arrow
+            margin-right: 39px
+        .next-arrow
+            transform: rotate(-180deg)
+            margin-left: 22px
+        .dot-active
+            img
+                display: block
+        &__item
+            margin-right: 16px
+            border-radius: 15px
+            width: 15px
+            height: 15px
+            border: 2px solid #ffffff
+            display: flex
+            justify-content: center
+            align-items: center
+            img
+                display: none
+                width: 9px
+                height: 9px
+
 
 #advantages
     font-family: "Proxima Nova Rg"
     font-size: 1.6rem
     padding: 20px 0
     background-color: rgba(255, 255, 255, .8)
-    margin-top: -283px
+    margin-top: -282px
     position: relative
     z-index: 10
     .container
@@ -259,6 +299,15 @@ header
                     font-weight: 
                 span
                     line-height: 19px
+
+@keyframes fade
+    from 
+        opacity: .4
+    to
+        opacity: 1
+        
+
+
 
 @media screen and ( max-width: 1500px )
     #slider 
