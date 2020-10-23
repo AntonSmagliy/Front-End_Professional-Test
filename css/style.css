@@ -130,6 +130,10 @@ header .container .feedback-wrapper button {
   z-index: 13;
 }
 
+#menu .container .burger:focus {
+  outline: none-;
+}
+
 #menu .container .burger span {
   display: block;
   background-color: #000000;
@@ -444,7 +448,7 @@ header .container .feedback-wrapper button {
   font-size: 1.6rem;
   padding: 20px 0;
   background-color: rgba(255, 255, 255, 0.8);
-  margin-top: -282px;
+  margin-top: -277px;
   position: relative;
   z-index: 10;
 }
